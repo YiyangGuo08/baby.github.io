@@ -1,0 +1,119 @@
+[
+    {
+        "name": "Shigeru Mizuki",
+        "gender": "male",
+        "age": 19,
+        "BornDead": "1922 ~ 2015",
+        "distance": 3,
+        "injury": "The explosion caused severe burns, and he lost his left arm. ",
+        "story": "He later became known for his works that depict his life as a hibakusha (atomic bomb survivor), including his autobiographical manga Onward Towards Our Noble Deaths"
+    },
+    {
+        "name": "Sadako Sasaki ",
+        "gender": "female",
+        "age": 2,
+        "BornDead": "1943 ~ 1955",
+        "distance": 1.6,
+        "injury": "Although she initially seemed unharmed, she developed leukemia a few years later due to radiation exposure.",
+        "story": ""
+    },
+    {
+        "name": "Keiji Nakazawa",
+        "gender": "male",
+        "age": 6,
+        "BornDead": "1939 ~ 2012",
+        "distance": 1.2,
+        "injury": "",
+        "story": "He survived, but his father, sister, and brother were killed. "
+    },
+    {
+        "name": "Keiko Ogura",
+        "gender": "female",
+        "age": 8,
+        "BornDead": "1937 ~ ",
+        "distance": 2.4,
+        "injury": "",
+        "story": "The blast knocked her unconscious, and when she awoke, she witnessed unimaginable destruction and suffering."
+    },
+    {
+        "name": "Kiyoshi Tanimoto",
+        "gender": "male",
+        "age": 39,
+        "BornDead": "1909 ~ 1986",
+        "distance": 3,
+        "injury": "Burns and radiation exposure-related ailments",
+        "story": "In the aftermath, he tirelessly worked to help other survivors, guiding them to safer areas and assisting with basic needs."
+    },
+    {
+        "name": "Tsutomu Yamaguchi",
+        "gender": "male",
+        "age": 29,
+        "BornDead": "1916 ~ 2010",
+        "distance": 3,
+        "injury": "",
+        "story": "He was in Hiroshima on a business trip when the bomb fell. Despite being seriously injured, he returned to his home city of Nagasaki—only to experience the second atomic bombing three days later. Surviving both."
+    },
+    {
+        "name": "Sumiteru Taniguchi",
+        "gender": "male",
+        "age": 16,
+        "BornDead": "1929 ~ 2017",
+        "distance": 1.8,
+        "injury": "He was badly burned by the bomb’s intense heat. He spent years in hospitals recovering and suffered chronic pain for the rest of his life.",
+        "story": ""
+    },
+    {
+        "name": "Akihiro Takahashi",
+        "gender": "male",
+        "age": 14,
+        "BornDead": "1931 ~ 2011",
+        "distance": 1.4,
+        "injury": "Severe burns and radiation-related health problems",
+        "story": ""
+    },
+    {
+        "name": "Dr. Shuntaro Hida",
+        "gender": "male",
+        "age": 28,
+        "BornDead": "1917 ~ 2017",
+        "distance": 6,
+        "injury": "Minor immediate physical injuries, but exposed to radiation",
+        "story": "In the aftermath, he treated countless radiation victims and spent decades researching the long-term health effects."
+    },
+    {
+        "name": "Yoshito Matsushige",
+        "gender": "male",
+        "age": 32,
+        "BornDead": "1913 ~ 2005",
+        "distance": 2.7,
+        "injury": "",
+        "story": "Though injured, he managed to photograph some of the only existing images of the devastated city in the immediate aftermath."
+    },
+    {
+        "name": "Hideko Tamura Snider",
+        "gender": "female",
+        "age": 9,
+        "BornDead": "1936 ~ ",
+        "distance": 4,
+        "injury": "",
+        "story": "She lost her mother in the bombing and endured years of emotional and physical recovery."
+    },
+    {
+        "name": "Hiroko Watanabe",
+        "gender": "female",
+        "age": 20,
+        "BornDead": "1925 ~ 2001",
+        "distance": 5,
+        "injury": "Although spared severe burns, she struggled with radiation-related illnesses for decades.",
+        "story": ""
+    },
+    {
+        "name": "Koko Kondo",
+        "gender": "female",
+        "age": 1,
+        "BornDead": "1944 ~ ",
+        "distance": 1.4,
+        "injury": "",
+        "story": "An infant at the time of the bombing, Koko Kondo survived in her home near Hiroshima’s center."
+    }
+]

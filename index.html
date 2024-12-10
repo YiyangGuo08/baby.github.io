@@ -1,183 +1,94 @@
-<!doctype html>    
-<!-- alert that the document is written in HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Circle with JS</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <html>
-    <head>
-      <!-- 展示在tab里的内容 -->
-      <title> 你爹の码 </title>  
-      <!-- 展示在tab里的小图标 -->
-      <link rel="shortcut icon" href="band1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Jersey+10&family=Jersey+10+Charted&family=Jersey+20&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text">
+      <h1>A THOUSAND SUNS</h1>
+      <h2>by Yiyang Guo</h2>
+    </div>
 
-      <meta charset="UTF-8">
+    <!-- 居中的图片容器 -->
+    <div class="image-container">
+      <img src="Cloud1.png" alt="Example Image">
 
-      <style>
-      /* 爷的风格 */
+      <!-- 交互点 -->
 
-        body {
-          background-color: antiquewhite;
-          /* white-space: pre; */
-        }
-
-        /* 改变全局字体 */
-        * {
-          font-family: "Pixelify Sans", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: <weight>;
-          font-style: normal;
-        }
-
-        /* 标题文字设置 */
-        #你爹敲码 {
-          position: absolute;
-          color:rgb(146, 196, 240);
-          opacity: 0.8;
-          text-shadow: 2px 5px 4px rgb(12, 41, 85);   
-          width: 100px;
-          left: 180px;
-          top: 100px;
-          font-size: 100px;
-          font-family: Pixelify Sans;
-          text-align: justify;
-          z-index: 50;
-        }
-
-        .container {
-          height: 100vh;
-          background-image: url("girl.gif"); /* 替换 'your-image.jpg' 为实际的图像路径 */
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-
-        #gun {
-          position: absolute;
-          top: 50px;
-          left: 50px;
-          width: 140px;
-          opacity: 1;
-          z-index: 10;
-        } 
-
-        #video {
-          position: absolute;
-          width: 300px;
-          top: 300px;
-          left: 300px;
-          /* right: 60vw; */
-          border-radius: 20px 20px 20px 20px;
-          z-index: 9;
-        }
+      <div class="interactive-circle" data-index="0" style="top:52%; left: 20%;"></div>
+      <div class="interactive-circle" data-index="1" style="top: 70%; left: 40%;"></div>
+      <div class="interactive-circle" data-index="2" style="top: 83%; left: 38%;"></div>
+      <div class="interactive-circle" data-index="3" style="top: 55%; left: 64%;"></div>
+      <div class="interactive-circle" data-index="4" style="top: 46%; left: 35%;"></div>
+      <div class="interactive-circle" data-index="5" style="top: 41%; left: 50%;"></div>
+      <div class="interactive-circle" data-index="6" style="top: 70%; left: 20%;"></div>
+      <div class="interactive-circle" data-index="7" style="top: 74%; left: 50%;"></div>
+      <div class="interactive-circle" data-index="8" style="top: 8%; left: 40%;"></div>
+      <div class="interactive-circle" data-index="9" style="top: 52%; left: 80%;"></div>
+      <div class="interactive-circle" data-index="10" style="top: 25%; left: 70%;"></div>
+      <div class="interactive-circle" data-index="11" style="top: 15%; left: 55%;"></div>
+      <div class="interactive-circle" data-index="12" style="top: 78%; left: 65%;"></div>
+    </div>
 
 
-        /* link设置 */
-        #HappyHappy:link {
-          z-index:10;
-          color: black;
-          width: 200px;
-          font-size: 30px;
-          top: 600px;
-          left: 50px;
-          /* text-decoration: none;  */
-          font-family: Pixelify Sans;
-          position: absolute;
-          transition: height 3s ease-in-out;
+    <!---- 分类选择 ----->
+    <div class="category-filter">
+      <div>
+          <label for="gender-select">Gender:</label>
+          <select id="gender-select">
+              <option value="all">All</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+          </select>
+      </div>
+      <div>
+          <label for="distance-select">Distance:</label>
+          <select id="distance-select">
+              <option value="all">All</option>
+              <option value="center~2km">Center ~ 2km</option>
+              <option value="2km~4km">2km ~ 4km</option>
+              <option value="4km~beyond">Beyond 4km</option>
+          </select>
+      </div>
+      <div>
+          <label for="age-select">Age at Bombing:</label>
+          <select id="age-select">
+              <option value="all">All</option>
+              <option value="0~10">0 ~ 10 years</option>
+              <option value="10~20">10 ~ 20 years</option>
+              <option value="20~30">20 ~ 30 years</option>
+              <option value="30+">30+ years</option>
+          </select>
+      </div>
+  </div>
+  
 
-        }
-        #HappyHappy:visited {
-          color: rgb(157, 92, 213);
-          text-decoration: none; 
-        }
-        #HappyHappy:hover {
-          color: rgb(229, 112, 196);
-          font-style: italic; 
-          height: 60vh;
-        }
-        #HappyHappy:active {
-          color: rgb(95, 149, 248);
-        }
-
-
-        #welcome:link {
-          z-index:10;
-          color: rgb(255, 206, 206);
-          width: 200px;
-          font-size: 50px;
-          top: 600px;
-          left: 300px;
-          /* text-decoration: none;  */
-          font-family: Pixelify Sans;
-          position: absolute;
-        }
-        #welcome:visited {
-          color: rgb(167, 128, 200);
-          text-decoration: none; 
-        }
-        #welcome:hover {
-          color: rgb(229, 112, 196);
-          font-style: italic; 
-        }
-        #welcome:active {
-          color: rgb(95, 149, 248);
-        }
-
-        #witch {
-          position: absolute;
-          top: 320px;
-          left: 50px;
-          width: 110px;
-          opacity: 1;
-          z-index: 10;
-          border-radius: 15px;
-        }
-        #witch:hover {
-          width: 120px;
-        }
-
-        .runofthe {
-          color:rgb(205, 143, 143);
-          /* position: absolute; */
-          font-size: 30px;
-        }  
-
-        #dear {
-          color:rgb(169, 124, 183);
-          font-size: 26px;
-        }
-
-
-      </style>
+      
     
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-      <img id="girl" src="girl.gif">
-      <img id="gun" src="gun.gif">
+    <!-- 悬停信息窗口 -->
+    <div class="hover-window">
+      <p id="name-age"></p>
+      <p id="distance"></p>
 
-      <div id="你爹敲码">  SheepSheep </div>
-            
-      <video loop controls id="video" src="Serendipity-with audio.mp4" type="mp4"></video>
+    </div>
 
-      <!-- links -->
-        <!-- 图片 -->
-      <a href="http://www.hehuan.co/single/4.html"><img id="witch" src="witch.gif"></a>
+    <!-- 左下角信息显示 -->
+    <div class="bottom-left-text">
+      <p id="name-age1"></p>
+      <p id="year-born-dead"></p>
+      <p id="injury"></p>
+      <p id="story"></p>
 
-        <!-- 文字 -->
-      <a href="https://www.youtube.com/watch?v=yci475Vwc10"><div>Happy Happy Happy</div></a>
+    </div>
 
-      <div><a id="HappyHappy" href="https://www.youtube.com/watch?v=yci475Vwc10">happy</a></div>
-
-      </div><a id="welcome" href=diedie.html> Welcome~~~ </a></div>
-
-      <!-- class -->
-      <div class="runofthe" id="goingto">if you have line breaks (or paragraph breaks) in the text you entered into the code, that those line breaks have been collapsed. One way to add line breaks is to type "<br>" right into your text where you want the break. </div>
-      <div id="shit" class="runofthe">going</div>
-      <div class="runofthe" id="goingtobed">full</div>
-
-
-      <!-- 给一段话里的特定文字添加属性 -->
-      <div id="cuernocueva">Once upon a midnight <span id="dear">dreary as I pondered</span> weak and weary</div>
-
-    </body>
-  </html>
+    <script src="script.js"></script>
+</body>
+</html>
